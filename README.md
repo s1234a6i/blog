@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Style is a choice Make yours
 
 You can use the [editor on GitHub](https://github.com/s1234a6i/blog/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
