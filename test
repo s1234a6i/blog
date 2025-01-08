@@ -1,0 +1,70 @@
+Here’s a set of scenario-based, medium-to-difficult level questions tailored to evaluate a candidate for a Full Stack position with expertise in Java (backend) and Angular (frontend):
+
+Frontend (Angular + TypeScript)
+	1.	Dynamic Component Loading
+Scenario: You need to design a dashboard that allows users to add and remove widgets dynamically.
+Question:
+	•	How would you dynamically load components in Angular? Can you walk me through the implementation?
+	•	How would you manage the state of widgets, ensuring persistence across user sessions?
+	2.	Performance Optimization
+Scenario: A page in your Angular app takes several seconds to load due to a large dataset being rendered in a table.
+Question:
+	•	How would you identify and resolve the performance bottleneck?
+	•	How would you implement infinite scrolling or virtual scrolling in Angular to optimize rendering?
+	3.	Dependency Injection
+Scenario: You have a service that fetches data from an API. Now, you need to mock this service for unit testing without modifying the original service.
+Question:
+	•	How would you achieve this using Angular’s dependency injection?
+	•	Can you demonstrate how you would write a unit test for a component using this mocked service?
+	4.	TypeScript Generics
+Scenario: You’re building a utility function to transform arrays of different types (e.g., numbers, strings) in a reusable manner.
+Question:
+	•	How would you use TypeScript generics to implement this?
+	•	Can you provide an example where this approach would be especially useful in your Angular app?
+
+Backend (Java)
+	5.	REST API Design
+Scenario: You’re tasked with designing an API endpoint for bulk uploading data to the database. The data could have partial errors, and the client expects a detailed error report.
+Question:
+	•	How would you design this API (e.g., HTTP methods, error handling)?
+	•	How would you ensure the operation is transactional but also allows partial success reporting?
+	6.	Concurrency Management
+Scenario: Your application processes high volumes of user requests to update the same database record.
+Question:
+	•	How would you handle this scenario to prevent race conditions and ensure data consistency?
+	•	Can you describe how Java’s synchronized, Lock, or other concurrency tools can be used here?
+	7.	Spring Boot Caching
+Scenario: You notice a frequently used endpoint is slowing down due to repeated database queries.
+Question:
+	•	How would you implement caching in Spring Boot to optimize this?
+	•	What strategies would you use to invalidate or refresh the cache when the underlying data changes?
+
+Full Stack Integration
+	8.	Error Handling Across Layers
+Scenario: A user submits invalid data through the Angular form, and the backend validation fails. The user expects meaningful error messages.
+Question:
+	•	How would you design the system to handle and propagate errors from the backend to the frontend in a user-friendly way?
+	•	How would you structure the error-handling code in Angular to display these messages dynamically?
+	9.	File Upload
+Scenario: A user uploads a large file to your application. You want to show the upload progress in real-time.
+Question:
+	•	How would you handle this on the frontend using Angular?
+	•	How would you implement the backend to support this functionality while ensuring scalability and security?
+	10.	Microservices Communication
+Scenario: Your Java-based backend consists of multiple microservices. One service needs to call another service’s API to complete a user request.
+Question:
+	•	How would you design the communication between these services?
+	•	How would you handle scenarios where one of the services is down or responds with latency?
+
+General Problem-Solving
+	11.	Debugging a Bug
+Scenario: A user reports that a certain feature works on their browser but not on others.
+Question:
+	•	How would you troubleshoot and resolve this issue on both frontend and backend?
+	•	How would you write tests to ensure cross-browser compatibility in the future?
+	12.	Real-World Application Scaling
+Scenario: Your application’s user base grows 10x overnight.
+Question:
+	•	What changes would you make to both the backend and frontend to ensure the system handles the load efficiently?
+
+Feel free to adjust these questions based on the candidate’s experience and your project needs. Let me know if you’d like further refinements!
