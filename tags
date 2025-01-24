@@ -1,0 +1,122 @@
+{
+  "properties": {
+    "displayName": "Apply Tags from Resource Group If Not Already Present",
+    "description": "This policy applies specific tags to resources, inheriting values from the parent resource group only if the tags are missing.",
+    "mode": "All",
+    "parameters": {
+      "requiredTags": {
+        "type": "Array",
+        "metadata": {
+          "displayName": "Tags to Apply",
+          "description": "The list of tags to inherit from the resource group if not already present."
+        },
+        "defaultValue": [
+          "application_id",
+          "environment",
+          "created_by",
+          "name",
+          "stack_name",
+          "description",
+          "termination_date",
+          "data_class"
+        ]
+      }
+    },
+    "policyRule": {
+      "if": {
+        "allOf": [
+          {
+            "field": "type",
+            "notEquals": "Microsoft.Resources/subscriptions/resourceGroups"
+          },
+          {
+            "anyOf": [
+              {
+                "value": "[parameters('requiredTags')[0]]",
+                "notEquals": "[coalesce(field('tags.application_id'), '')]"
+              },
+              {
+                "value": "[parameters('requiredTags')[1]]",
+                "notEquals": "[coalesce(field('tags.environment'), '')]"
+              },
+              {
+                "value": "[parameters('requiredTags')[2]]",
+                "notEquals": "[coalesce(field('tags.created_by'), '')]"
+              },
+              {
+                "value": "[parameters('requiredTags')[3]]",
+                "notEquals": "[coalesce(field('tags.name'), '')]"
+              },
+              {
+                "value": "[parameters('requiredTags')[4]]",
+                "notEquals": "[coalesce(field('tags.stack_name'), '')]"
+              },
+              {
+                "value": "[parameters('requiredTags')[5]]",
+                "notEquals": "[coalesce(field('tags.description'), '')]"
+              },
+              {
+                "value": "[parameters('requiredTags')[6]]",
+                "notEquals": "[coalesce(field('tags.termination_date'), '')]"
+              },
+              {
+                "value": "[parameters('requiredTags')[7]]",
+                "notEquals": "[coalesce(field('tags.data_class'), '')]"
+              }
+            ]
+          }
+        ]
+      },
+      "then": {
+        "effect": "modify",
+        "details": {
+          "roleDefinitionIds": [
+            "/providers/Microsoft.Authorization/roleDefinitions/5db29d4f-1b5e-4c5a-8b9b-4e52b4a0f943"
+          ],
+          "operations": [
+            {
+              "operation": "addOrReplace",
+              "field": "tags.application_id",
+              "value": "[coalesce(resourceGroup().tags.application_id, 'DefaultValue')]"
+            },
+            {
+              "operation": "addOrReplace",
+              "field": "tags.environment",
+              "value": "[coalesce(resourceGroup().tags.environment, 'DefaultValue')]"
+            },
+            {
+              "operation": "addOrReplace",
+              "field": "tags.created_by",
+              "value": "[coalesce(resourceGroup().tags.created_by, 'DefaultValue')]"
+            },
+            {
+              "operation": "addOrReplace",
+              "field": "tags.name",
+              "value": "[coalesce(resourceGroup().tags.name, 'DefaultValue')]"
+            },
+            {
+              "operation": "addOrReplace",
+              "field": "tags.stack_name",
+              "value": "[coalesce(resourceGroup().tags.stack_name, 'DefaultValue')]"
+            },
+            {
+              "operation": "addOrReplace",
+              "field": "tags.description",
+              "value": "[coalesce(resourceGroup().tags.description, 'DefaultValue')]"
+            },
+            {
+              "operation": "addOrReplace",
+              "field": "tags.termination_date",
+              "value": "[coalesce(resourceGroup().tags.termination_date, 'DefaultValue')]"
+            },
+            {
+              "operation": "addOrReplace",
+              "field": "tags.data_class",
+              "value": "[coalesce(resourceGroup().tags.data_class, 'DefaultValue')]"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
