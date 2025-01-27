@@ -1,0 +1,127 @@
+Below are the End-to-End Functional Test Cases for your Smart Assistant, based on its key features:
+
+1. DDP Pipeline Support Feature
+
+Test Case Name: Validate Error Handling and Solution Suggestion for Known Errors
+
+Description: Verify if Smart Assistant provides solutions for known errors in the pipeline logs and generates a Bitbucket link for the source code.
+
+Steps to Perform:
+	1.	Trigger a pipeline with a predefined known error.
+	2.	Open the Smart Assistant interface and select the DDP Pipeline Support option.
+	3.	Verify that Smart Assistant analyzes the logs and identifies the error.
+	4.	Check if a Bitbucket link is generated for the corresponding source code changes.
+	5.	Verify if the option to create a support ticket is available and functional.
+
+Test Case Name: Handle Unknown Pipeline Errors
+
+Description: Ensure Smart Assistant highlights reasons for failure and provides escalation options for unknown errors.
+
+Steps to Perform:
+	1.	Trigger a pipeline with an error not defined in the error catalog.
+	2.	Open the Smart Assistant interface and select the DDP Pipeline Support option.
+	3.	Verify if Smart Assistant displays a message stating the issue cannot be resolved.
+	4.	Ensure the logs are attached, and an option to escalate the issue to the support team is available.
+	5.	Submit the escalation request and validate if the support ticket is generated correctly.
+
+2. DSO Customer Care Workflow
+
+Test Case Name: Auto-Fill Key Parameters for Pipeline Support
+
+Description: Validate if Smart Assistant auto-fills key fields like application ID, component name, and environment for pipeline support.
+
+Steps to Perform:
+	1.	Open Smart Assistant and select the “Engage DSO Customer Care” option.
+	2.	Choose “Pipeline Support” from the provided options.
+	3.	Provide a valid pipeline name and proceed.
+	4.	Verify if Smart Assistant automatically populates application ID, component name, and environment fields.
+	5.	Submit the request and check if the workflow completes without errors.
+
+Test Case Name: Handle General Queries in DSO Workflow
+
+Description: Validate Smart Assistant’s ability to process and escalate general queries seamlessly.
+
+Steps to Perform:
+	1.	Open Smart Assistant and select the “Engage DSO Customer Care” option.
+	2.	Choose “General Query” from the provided options.
+	3.	Enter a description of the issue and submit the request.
+	4.	Verify if the request is processed and escalated to the appropriate team.
+	5.	Check if the support ticket is generated and linked correctly.
+
+3. Documentation Finder Feature
+
+Test Case Name: Locate Documentation Successfully
+
+Description: Ensure Smart Assistant retrieves the correct documentation link when the context is provided.
+
+Steps to Perform:
+	1.	Open Smart Assistant and select the “Documentation Finder” option.
+	2.	Enter a specific document request (e.g., “Application Onboarding Guide”).
+	3.	Verify if the assistant fetches the correct link and displays it.
+	4.	Check if clicking on the link opens the document seamlessly.
+
+Test Case Name: Handle Missing Documentation
+
+Description: Validate the fallback mechanism when requested documentation is unavailable.
+
+Steps to Perform:
+	1.	Open Smart Assistant and select the “Documentation Finder” option.
+	2.	Enter a request for unavailable documentation.
+	3.	Verify if Smart Assistant suggests alternative options or directs the user to customer care.
+	4.	Ensure that default documentation links are provided as a fallback.
+
+4. Admin Features and Reporting
+
+Test Case Name: Generate Usage Report
+
+Description: Validate if the admin can generate a report showing usage metrics for Smart Assistant.
+
+Steps to Perform:
+	1.	Log in as an admin and navigate to the reporting dashboard.
+	2.	Select the reporting period and generate a usage report.
+	3.	Verify if the report displays metrics like the number of queries handled, error resolutions provided, and escalations raised.
+	4.	Export the report and validate the data format.
+
+Test Case Name: Access Audit Logs
+
+Description: Ensure the admin can access and view audit logs for tracking user interactions with Smart Assistant.
+
+Steps to Perform:
+	1.	Log in as an admin and navigate to the audit logs section.
+	2.	Select a specific time period and filter by user or feature.
+	3.	Verify if the logs provide details of user interactions, including timestamps and actions taken.
+	4.	Check if the logs can be exported for further analysis.
+
+5. Integration with DDP Pipelines
+
+Test Case Name: Fetch Pipeline Logs Automatically
+
+Description: Validate if Smart Assistant fetches logs directly from the DDP pipeline for analysis.
+
+Steps to Perform:
+	1.	Execute a pipeline in DDP and introduce an error scenario.
+	2.	Use Smart Assistant to fetch pipeline logs.
+	3.	Verify if the logs are fetched correctly and displayed in the interface.
+	4.	Check if the assistant provides actionable insights or escalates the issue as needed.
+
+6. General Usability Features
+
+Test Case Name: Seamless Interaction for Users
+
+Description: Ensure users can interact with Smart Assistant without navigation issues.
+
+Steps to Perform:
+	1.	Open Smart Assistant and interact with each feature (Pipeline Support, DSO Workflow, Documentation Finder).
+	2.	Verify that the interface is responsive and all options are accessible.
+	3.	Test on multiple devices and browsers to ensure compatibility.
+
+Test Case Name: Feedback Submission
+
+Description: Validate the feedback mechanism for collecting user input.
+
+Steps to Perform:
+	1.	Complete a task using Smart Assistant.
+	2.	Submit feedback through the provided option.
+	3.	Verify if the feedback is logged and visible in the admin dashboard.
+
+These test cases cover major functionalities and ensure that the Smart Assistant tool performs as expected. They provide a structured approach for testing teams to validate the tool’s effectiveness and robustness.
