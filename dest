@@ -1,0 +1,70 @@
+Here are the Jira user stories for the issues and improvement:
+
+Story 1: Update No Proxy Variable for Internal Connectivity in Jenkins
+
+Summary:
+Due to the recent Jenkins upgrade, the no_proxy environment variable is not automatically inherited from http_proxy. We need to explicitly set no_proxy to ensure seamless connectivity with internal applications and assume role operations.
+
+Acceptance Criteria:
+	•	Identify and document internal applications affected by this issue.
+	•	Modify Jenkins configuration to include no_proxy variable explicitly.
+	•	Validate connectivity to internal apps and assume role operations.
+	•	Confirm resolution and update documentation if necessary.
+
+Comment:
+Worked with the DSOtools team and had troubleshooting sessions to fix this issue, ensuring proper configuration and reverting to the previous working mode.
+
+Story 2: Fix Lockable Plugin Issue Affecting Pipeline Views
+
+Summary:
+After the Jenkins upgrade, the Lockable Plugin caused issues disabling pipeline views in the ddpv4.1 folder on some Jenkins agents. This needs to be investigated and fixed.
+
+Acceptance Criteria:
+	•	Analyze the root cause of the lockable plugin issue post-upgrade.
+	•	Work with the DSOtools team to apply a fix or rollback the plugin if necessary.
+	•	Restore pipeline views on affected Jenkins agents.
+	•	Validate pipeline functionality and confirm resolution.
+
+Comment:
+Collaborated with the DSOtools team, troubleshot the issue, and worked on restoring pipeline views by either fixing or rolling back the Lockable Plugin.
+
+Story 3: Resolve Aquasec Plugin Argument Issue Post-Jenkins Upgrade
+
+Summary:
+The latest Aquasec plugin update (v3.2.7) requires additional arguments that were not documented, causing failures. We need to investigate, document the required arguments, and decide whether to use v3.2.7 or revert to v3.2.5.
+
+Acceptance Criteria:
+	•	Investigate the missing argument issue with the Aquasec plugin.
+	•	Collaborate with the container security team and Aqua vendor for resolution.
+	•	Implement necessary argument changes or revert to v3.2.5 as a temporary solution.
+	•	Validate plugin functionality post-fix.
+
+Comment:
+Worked with the DSOtools team and Aqua vendor to troubleshoot the issue. Temporarily downgraded to v3.2.5 while gathering insights for a long-term fix.
+
+Story 4: Fix Jenkins Input Request Timeout Conflict
+
+Summary:
+A version conflict in the upgraded Jenkins setup has caused input requests with timeouts to fail. We need to analyze the issue and implement a workaround or fix.
+
+Acceptance Criteria:
+	•	Identify the version conflict causing input request timeout failures.
+	•	Work with the DSOtools team to test potential fixes.
+	•	Apply necessary configuration changes or roll back to a stable version.
+	•	Validate that input requests and timeout features function correctly.
+
+Comment:
+Troubleshot the issue with the DSOtools team and worked on restoring the expected behavior for input requests with timeouts.
+
+Story 5: Improve Container Config Validation for P2 Release Candidate Packaging
+
+Summary:
+Identified an improvement opportunity in container config validation logic for P2 release candidate packaging. This story aims to enhance the validation process for better efficiency and accuracy.
+
+Acceptance Criteria:
+	•	Analyze existing container config validation logic.
+	•	Identify gaps and propose an improvement strategy.
+	•	Implement necessary changes to improve validation efficiency.
+	•	Validate the updated logic with test cases and confirm expected results.
+
+These stories cover all the issues and the improvement task. Let me know if you need any modifications!
